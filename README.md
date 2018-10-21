@@ -4,12 +4,18 @@ Using multiprocessing and requests to send requests using threads to fasten send
 ## Usage
 <pre>
 from mrequests import MultiRequests
-m = MultiRequests(method='GET')
-urls = ["https://www.walmart.com/reviews/product/107","https://www.walmart.com/reviews/product/625"]
+m = MultiRequests.PoolRequests(method='GET')
+urls = ["https://www.google.com","https://www.yahoo.com"]
 resp = m.send(urls)
 for r in resp:
   print(r.status_code)
 </pre>
+
+## Installation
+<pre>
+pip3 install --index-url https://test.pypi.org/simple/ mrequests
+</pre>
+
 
 ## Future Work
 <ul>
