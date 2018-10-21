@@ -19,11 +19,10 @@ class MultiRequests(object):
         self.url = url
         try:
             self.response = self.session.request(self.method,self.url)
-            print(self.response.status_code)
         except Exception as e:
             self.exception = e
             self.traceback = traceback.format_exc()
-        return self
+        return self.response
 
     def send(self,urls,**kwargs):
         pool = ThreadPool(32)
@@ -31,3 +30,4 @@ class MultiRequests(object):
         results = pool.map(self.send_request,self.urls)
         pool.close()
         pool.join()
+        return results
