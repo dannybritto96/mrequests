@@ -13,7 +13,7 @@ for r in resp:
 
 ## Installation
 <pre>
-pip3 install --index-url https://test.pypi.org/simple/ mrequests
+pip install mrequests
 </pre>
 
 
