@@ -3,8 +3,8 @@ Using multiprocessing and requests to send requests using threads to fasten send
 
 ## Usage
 <pre>
-from mrequests import MultiRequests
-m = MultiRequests.PoolRequests(method='GET')
+from mrequests import PoolRequests
+m = PoolRequests(method="GET")
 urls = ["https://www.google.com","https://www.yahoo.com"]
 resp = m.send(urls)
 for r in resp:
