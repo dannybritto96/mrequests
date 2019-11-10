@@ -15,6 +15,12 @@ class PoolRequests(object):
 
         adapter = requests.adapters.HTTPAdapter(pool_connections=100,pool_maxsize=100)
         self.session.mount("https://",adapter)
+            
+    def headers_update(self,headers: dict):
+        self.session.headers.update(headers)
+    
+    def set_basic_auth(self, username: str, password: str):
+        self.session.auth(username, password)
 
     def send_request(self,url):
         self.url = url
