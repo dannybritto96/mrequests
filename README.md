@@ -22,5 +22,4 @@ pip install mrequests
 ## Future Work
 <ul>
   <li>Parameterized requests</li>
-  <li>Authenticated Sessions</li>
  </ul>
