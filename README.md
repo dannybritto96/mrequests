@@ -1,3 +1,5 @@
+> **Archived (November 2026):** this project is no longer maintained. For concurrent HTTP requests, use [`concurrent.futures.ThreadPoolExecutor`](https://docs.python.org/3/library/concurrent.futures.html) with `requests`, or an async client such as [`httpx`](https://www.python-httpx.org/) or [`aiohttp`](https://docs.aiohttp.org/).
+
 # mrequests
 Using multiprocessing and requests to send requests using threads to fasten sending large number of requests.
 
